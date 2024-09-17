@@ -101,6 +101,7 @@
   	wget
 	helix
 	git
+	element-desktop
   ];
 
   environment.variables.EDITOR = "vim";
