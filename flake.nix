@@ -2,7 +2,7 @@
   description = "Coenicorn nixos config";
   
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   }; 
 
   outputs = { self, nixpkgs, ... }: {
