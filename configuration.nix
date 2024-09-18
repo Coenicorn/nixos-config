@@ -7,7 +7,8 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      # ./dell-laptop-hardware.nix
+      ./nixpad-hardware.nix
     ];
 
   # Bootloader.
