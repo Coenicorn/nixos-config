@@ -7,7 +7,7 @@
 
   outputs = { self, nixpkgs, ... }: {
     nixosConfigurations = {
-      coenicorn-nix-laptop = nixpkgs.lib.nixosSystem {
+      coenicorn-nixpad = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ ./configuration.nix ];
      };
