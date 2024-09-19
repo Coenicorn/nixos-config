@@ -53,9 +53,6 @@
       xterm.enable = false;
     };
    
-    displayManager = {
-        defaultSession = "none+i3";
-    };
 
     windowManager.i3 = {
       enable = true;
@@ -66,6 +63,11 @@
         i3blocks #if you are planning on using i3blocks over i3status
      ];
     };
+  };
+
+
+  services.displayManager = {
+      defaultSession = "none+i3";
   };
 
   # Enable the GNOME Desktop Environment.
@@ -129,6 +131,9 @@
 	  element-desktop
     alacritty
     tokyonight-gtk-theme
+    discord
+    neofetch
+    prismlauncher
   ];
 
   environment.variables.EDITOR = "vim";
@@ -148,7 +153,11 @@
   services.openssh.enable = true;
 
   # Disable laptop lid behaviour
-  services.logind.lidSwitch = "suspend";
+  services.logind = {
+    lidSwitch = "suspend";
+    lidSwitchDocked = "ignore";
+    lidSwitchExternalPower = "ignore";
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
